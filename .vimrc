@@ -21,10 +21,11 @@ set showcmd
 set nohlsearch
 
 " to enable solarized
+let g:solarized_termcolors=256
 syntax enable
 set background=dark
-let g:solarized_termcolors=256
 colorscheme solarized
+set t_Co=256
 
 " highlight Golang syntax
 filetype off
@@ -33,3 +34,5 @@ set runtimepath+=$GOROOT/misc/vim
 filetype plugin indent on
 " below command suggested in readme, but messes with solarized
 " syntax on
+
+filetype on
