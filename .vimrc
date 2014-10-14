@@ -36,3 +36,5 @@ filetype plugin indent on
 " syntax on
 
 filetype on
+
+autocmd filetype text set texwidth=72
