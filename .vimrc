@@ -6,21 +6,30 @@ set softtabstop=4
 set shiftwidth=4
 set expandtab
 set nocompatible
+
 " allows you to go to last space
 " this is stupid in hindsight, so I'm removing it
 " set virtualedit=onemore
 set encoding=utf-8
+
 " highlight search matches
 " set hlsearch
+"
 " shows matching during search typing
 " set incsearch
+"
 " search is case insensitive, unless it uses caps
 set smartcase
+
 " show incomplete commands
 set showcmd
+
+" prevents annoying lingering search highlighting
 set nohlsearch
 
 " to enable solarized
+" expects TERM=screen-256color
+" the order of these commands matters
 let g:solarized_termcolors=256
 syntax enable
 set background=dark
@@ -37,4 +46,4 @@ filetype plugin indent on
 
 filetype on
 
-autocmd filetype text set texwidth=72
+autocmd filetype text set textwidth=72
