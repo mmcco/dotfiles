@@ -36,11 +36,11 @@ set background=dark
 colorscheme solarized
 set t_Co=256
 
-" highlight Golang syntax
-filetype off
-filetype plugin indent off
-set runtimepath+=$GOROOT/misc/vim
-filetype plugin indent on
+" highlight Golang syntax - only necessary when not in package manager
+"filetype off
+"filetype plugin indent off
+"set runtimepath+=$GOROOT/misc/vim
+"iletype plugin indent on
 " below command suggested in readme, but messes with solarized
 " syntax on
 

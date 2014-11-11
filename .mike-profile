@@ -1,3 +1,7 @@
+. /etc/mkshrc
+
+bind '^l'=clear-screen
+
 # for some reason, this gets overwritten by the mkshrc that was copied in
 alias ls='ls --color=auto'
 
@@ -8,8 +12,11 @@ alias montani='ssh mike@montani.keystretch.com'
 alias semper='ssh mike@semper.keystretch.com'
 alias liberi='ssh mike@liberi.keystretch.com'
 alias gadsden='ssh mike@gadsden.keystretch.com'
+
 alias butter='ssh mmcconv1@butter.cs.swarthmore.edu'
 alias bluejay='ssh mmcconv1@bluejay.cs.swarthmore.edu'
+
+alias igm1='ssh mmcconvi@igm1.pha.jhu.edu'
 
 export TERM='screen-256color'
 
@@ -17,5 +24,7 @@ alias update='sudo apt-get update; sudo apt-get upgrade; sudo apt-get dist-upgra
 alias backup='tarsnap --keyfile $HOME/Documents/tarsnap.key --cachedir $HOME/.tarsnap-cache -c -f backup-$(date --rfc-3339=seconds | sed "s/ /_/g") $HOME/tarsnap'
 alias backup_ls='tarsnap --keyfile /home/mike/Documents/tarsnap.key --list-archives'
 alias backup_stats='tarsnap --keyfile /home/mike/Documents/tarsnap.key --cachedir $HOME/.tarsnap-cache --print-stats'
+
+export GOPATH=$HOME/.go
 
 umask 077
