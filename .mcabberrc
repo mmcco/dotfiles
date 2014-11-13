@@ -10,7 +10,7 @@ set jid = bones-malone@blah.im
 # If password is not given, it will be interactively asked for.
 # Note: if the password contains leading or trailing spaces, you must
 # enclose it with quotes: set password = " example password "
-set password = fm0JGYY`!m%MgWzZ:x!!hLf{q
+#set password = <INSERT PASSWORD HERE>
 
 # You can provide a server name if you want mcabber to connect
 # to a specific server.
