@@ -3,4 +3,4 @@ The automated script has completed!
 
 The following must be done manually:
     * configure git, add SSH key
-    * move id_rsa to ~/.ssh
+    * move id_rsa and id_rsa.pub to ~/.ssh

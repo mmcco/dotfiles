@@ -79,8 +79,8 @@ set tls = 1
 # Proxy
 # mcabber can use a proxy if it supports the CONNECT method
 # The proxy_user/proxy_pass variables are optional.
-#set proxy_host = "proxy-hostname"
-#set proxy_port = 3128
+#set proxy_host = "localhost"
+#set proxy_port = 9050
 #set proxy_user = "username"
 #set proxy_pass = "password"
 

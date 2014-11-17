@@ -47,3 +47,5 @@ set t_Co=256
 filetype on
 
 autocmd filetype text set textwidth=72
+
+filetype plugin indent on
