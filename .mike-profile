@@ -25,6 +25,10 @@ alias backup='tarsnap --keyfile $HOME/Documents/tarsnap.key --cachedir $HOME/.ta
 alias backup_ls='tarsnap --keyfile /home/mike/Documents/tarsnap.key --list-archives'
 alias backup_stats='tarsnap --keyfile /home/mike/Documents/tarsnap.key --cachedir $HOME/.tarsnap-cache --print-stats'
 
+alias ipa='curl whatismyip.akamai.com; echo'
+
 export GOPATH=$HOME/.go
 
 umask 077
+
+python3 ~/.raymond-unix-rules.py
