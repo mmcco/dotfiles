@@ -1,11 +1,14 @@
 . /etc/mkshrc
 
+export EDITOR='vim'
+export PAGER='less'
+
 bind '^l'=clear-screen
 
 # for some reason, this gets overwritten by the mkshrc that was copied in
 alias ls='ls --color=auto'
 
-alias puffy='ssh sshadmin@puffy.keystretch.com'
+alias puffy='ssh mike@puffy.keystretch.com'
 alias fridgenet='ssh mike@fridge-net.keystretch.com'
 alias chosin='ssh mike@chosin.keystretch.com'
 alias montani='ssh mike@montani.keystretch.com'
@@ -16,6 +19,10 @@ alias gadsden='ssh mike@gadsden.keystretch.com'
 alias butter='ssh mmcconv1@butter.cs.swarthmore.edu'
 alias bluejay='ssh mmcconv1@bluejay.cs.swarthmore.edu'
 
+alias sccs='ssh mmcconv1@sccs.swarthmore.edu'
+alias heron='ssh mmcconv1@heron.sccs.swarthmore.edu'
+alias gwaihir='ssh s-mmcconv1@gwaihir.sccs.swarthmore.edu'
+
 alias igm1='ssh mmcconvi@igm1.pha.jhu.edu'
 
 export TERM='screen-256color'
@@ -25,10 +32,16 @@ alias backup='tarsnap --keyfile $HOME/Documents/tarsnap.key --cachedir $HOME/.ta
 alias backup_ls='tarsnap --keyfile /home/mike/Documents/tarsnap.key --list-archives'
 alias backup_stats='tarsnap --keyfile /home/mike/Documents/tarsnap.key --cachedir $HOME/.tarsnap-cache --print-stats'
 
-alias ipa='curl whatismyip.akamai.com; echo'
+alias ipa='curl -s whatismyip.akamai.com; echo'
+alias iploc='ip=$(curl -s whatismyip.akamai.com); echo $ip; geoiplookup $ip'
+
+alias wireshark="sudo setcap 'CAP_NET_RAW+eip CAP_NET_ADMIN+eip' /usr/bin/dumpcap; /usr/bin/wireshark"
 
 export GOPATH=$HOME/.go
 
 umask 077
 
-python3 ~/.raymond-unix-rules.py
+case "$-" in
+*i*)    python3 ~/.raymond-unix-rules.py ;;
+*) ;;
+esac

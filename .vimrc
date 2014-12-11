@@ -49,3 +49,9 @@ filetype on
 autocmd filetype text set textwidth=72
 
 filetype plugin indent on
+
+" return to line from previous exit
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+    \| exe "normal! g'\"" | endif
+endif

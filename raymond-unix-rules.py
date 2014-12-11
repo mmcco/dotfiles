@@ -2,7 +2,7 @@ import random
 
 rules = ['Write simple parts connected by clean interfaces.',
         'Clarity is better than cleverness.',
-        'Design programs to be ocnnected to other programs.',
+        'Design programs to be connected to other programs.',
         'Separate policy from mechanism; separate interfaces from engines.',
         'Design for simplicity; add complexity only where you must.',
         'Separate policy from mechanism; separate interfaces from engines.',
