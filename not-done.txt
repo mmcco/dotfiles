@@ -2,5 +2,6 @@
 The automated script has completed!
 
 The following must be done manually:
+    * import privates dotfile(s)
     * configure git, add SSH key
     * move id_rsa and id_rsa.pub to ~/.ssh
