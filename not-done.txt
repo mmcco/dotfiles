@@ -2,6 +2,9 @@
 The automated script has completed!
 
 The following must be done manually:
-    * import privates dotfile(s)
+    * import private dotfile(s)
     * configure git, add SSH key
     * move id_rsa and id_rsa.pub to ~/.ssh
+    * build tarsnap (dependencies already installed)
+    * add DNS nameserver override
+
