@@ -1,0 +1,11 @@
+! $OpenBSD: dot.Xdefaults,v 1.3 2014/07/10 10:22:59 jasper Exp $
+
+UXTerm*loginShell:true
+UXTerm*locale: utf8
+
+UXTerm*Background: black
+UXTerm*Foreground: #CCCCCC
+
+UXTerm*cursorColor: #3E36AD
+#xterm*faceName: Liberation Mono:size=10
+UXTerm*faceName: Hack:size=10
