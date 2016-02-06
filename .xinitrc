@@ -10,7 +10,8 @@ xset +fp /usr/local/share/fonts/cantarell
 xset +fp /usr/local/share/fonts/Hack
 xset +fp /usr/local/share/fonts/misc
 xset +fp /usr/local/share/fonts/Droid
-xset +fp /usr/local/share/fonts/ghostscript
+# causes ugly Firefox PDF rendering
+#xset +fp /usr/local/share/fonts/ghostscript
 
 ssh-agent env LC_CTYPE="en_US.UTF-8" \
 	LC_MESSAGES="en_US.UTF-8" \

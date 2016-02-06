@@ -57,11 +57,12 @@ set t_Co=256
 
 filetype on
 
-autocmd filetype text set textwidth=72
+autocmd filetype text set textwidth=68
 autocmd filetype tex set textwidth=68
+autocmd filetype plaintex set textwidth=68
 autocmd filetype c set textwidth=72
 autocmd filetype cpp set textwidth=72
-autocmd filetype md set textwidth=72
+autocmd filetype markdown set textwidth=72
 
 " avoid appending newline
 autocmd filetype mail set binary
@@ -69,10 +70,14 @@ autocmd filetype mail set binary
 autocmd filetype text set bomb
 autocmd filetype mail set bomb
 
+autocmd filetype mail set bomb
+
 "autocmd filetype hercules set syntax=rust
 "autocmd filetype hercules set expandtab
 
 autocmd filetype c set syntax=glib
+
+au BufRead,BufNewFile *.cocci setfiletype diff
 
 filetype plugin indent on
 
@@ -89,3 +94,6 @@ let @w =':%! fmt -w 78:x'
 set nojoinspaces
 
 let @s =':setlocal spell spelllang=en_us'
+let @d =':%s/ a\// /:%s/ b\// /'
+let @f =':set textwidth=72k'
+let @p = ':sp /tmp/t.diffggyG:qGop'
