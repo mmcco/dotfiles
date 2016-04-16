@@ -93,7 +93,19 @@ let @w =':%! fmt -w 78:x'
 " no double space after punctuation
 set nojoinspaces
 
-let @s =':setlocal spell spelllang=en_us'
-let @d =':%s/ a\// /:%s/ b\// /'
-let @f =':set textwidth=72k'
+let @s = ':setlocal spell spelllang=en_us'
+let @d = ':%s/ a\// /:%s/ b\// /'
+let @f = ':set textwidth=72k'
 let @p = ':sp /tmp/t.diffggyG:qGop'
+let @c = ':set colorcolumn=80'
+
+" modify selected text using combining diacritics
+command! -range -nargs=0 Overline        call s:CombineSelection(<line1>, <line2>, '0305')
+command! -range -nargs=0 Underline       call s:CombineSelection(<line1>, <line2>, '0332')
+command! -range -nargs=0 DoubleUnderline call s:CombineSelection(<line1>, <line2>, '0333')
+command! -range -nargs=0 Strikethrough   call s:CombineSelection(<line1>, <line2>, '0336')
+
+function! s:CombineSelection(line1, line2, cp)
+  execute 'let char = "\u'.a:cp.'"'
+    execute a:line1.','.a:line2.'s/\%V[^[:cntrl:]]/&'.char.'/ge'
+    endfunction
